@@ -46,6 +46,7 @@ GetBuilder<LocalizationController>(builder: (localizationController) {
     },
   );
 }),
+dart```
 
 ## Example Custom Widgets Usage
 
