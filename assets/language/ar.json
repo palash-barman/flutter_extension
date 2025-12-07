@@ -1,3 +1,4 @@
 {
-  "app_name": "اختر"
+  "app_name": "اختر",
+  "connection_to_api_server_failed": "فشل الاتصال بخادم API بسبب الاتصال بالإنترنت"
 }

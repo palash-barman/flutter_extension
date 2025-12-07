@@ -1,3 +1,4 @@
 {
-  "app_name": "Test theme and language"
+  "app_name": "Test theme and language",
+  "connection_to_api_server_failed": "Connection to API server failed due to internet connection"
 }

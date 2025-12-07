@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
               fallbackLocale: Locale(AppConstants.languages[0].languageCode, AppConstants.languages[0].countryCode),
               transitionDuration: const Duration(milliseconds: 500),
               getPages: AppRoutes.page,
-              initialRoute: AppRoutes.homeScreen,
+              initialRoute: AppRoutes.splashScreen,
             );
           }
         );

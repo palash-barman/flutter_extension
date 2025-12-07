@@ -1,6 +1,7 @@
+import 'package:flutter_extension/views/screen/home/home_screen.dart';
 import 'package:get/get.dart';
 
-import '../views/screen/Splash/splash_screen.dart';
+import '../views/screen/splash/splash_screen.dart';
 
 class AppRoutes{
 
@@ -9,6 +10,7 @@ class AppRoutes{
 
  static List<GetPage> page=[
     GetPage(name:splashScreen, page: ()=>const SplashScreen()),
+     GetPage(name:homeScreen, page: ()=>const HomeScreen()),
   
 
   ];

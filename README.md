@@ -4,13 +4,50 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Theme and Language Switcher Example
 
-A few resources to get you started if this is your first Flutter project:
+This example demonstrates a **theme switcher** and a **language dropdown** in Flutter using `GetX`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```dart
+// Theme Switcher
+Switch(
+  value: Get.find<ThemeController>().darkTheme,
+  onChanged: (v) {
+    Get.find<ThemeController>().toggleTheme();
+  },
+),
+const SizedBox(height: 20),
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+// Language Dropdown  
+GetBuilder<LocalizationController>(builder: (localizationController) {
+  int _index = 0;
+  List<DropdownMenuItem<int>> _languageList = [];
+  for(int index=0; index<AppConstants.languages.length; index++) {
+    _languageList.add(DropdownMenuItem(
+      value: index,
+      child: Text(AppConstants.languages[index].languageName),
+    ));
+    if(AppConstants.languages[index].languageCode == localizationController.locale.languageCode) {
+      _index = index;
+    }
+  }
+  return DropdownButton<int>(
+    value: _index,
+    items: _languageList,
+    dropdownColor: Theme.of(context).cardColor,
+    icon: const Icon(Icons.keyboard_arrow_down),
+    elevation: 0,
+    iconSize: 30,
+    underline: const SizedBox(),
+    onChanged: (int? index) {
+      localizationController.setLanguage(
+        Locale(
+          AppConstants.languages[index!].languageCode, 
+          AppConstants.languages[index].countryCode
+        )
+      );
+    },
+  );
+}),
+const SizedBox(width: 20),
+

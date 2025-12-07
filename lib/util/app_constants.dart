@@ -6,6 +6,10 @@ class AppConstants{
   static const double APP_VERSION = 2.0;
 
 
+
+  static const String TOKEN ="token";
+
+
   // share preference Key
   static String THEME ="theme";
   static const String LANGUAGE_CODE = 'language_code';
