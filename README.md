@@ -1,7 +1,3 @@
-# flutter_extension
-
-A new Flutter project.
-
 ## Getting Started
 
 ## Theme and Language Switcher Example
@@ -16,7 +12,8 @@ Switch(
     Get.find<ThemeController>().toggleTheme();
   },
 ),
-const SizedBox(height: 20),
+
+
 
 // Language Dropdown  
 GetBuilder<LocalizationController>(builder: (localizationController) {
@@ -49,5 +46,5 @@ GetBuilder<LocalizationController>(builder: (localizationController) {
     },
   );
 }),
-const SizedBox(width: 20),
+
 
