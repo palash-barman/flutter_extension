@@ -47,4 +47,24 @@ GetBuilder<LocalizationController>(builder: (localizationController) {
   );
 }),
 
+## Example Custom Widgets Usage
+
+This section shows how to use **CustomImage** and **CustomButton** widgets in your Flutter project.
+
+```dart
+// Example of CustomImage usage
+const CustomImage(
+  image: "slslsls",
+  height: 100,
+  width: 200,
+),
+const SizedBox(height: 20),
+
+// Example of CustomButton usage
+CustomButton(
+  onTap: () {},
+  text: "Click Me",
+),
+
+
 

@@ -2,8 +2,8 @@ import '../data/model/language_model.dart';
 
 class AppConstants{
 
-  static const String APP_NAME = '6amMart';
-  static const double APP_VERSION = 2.0;
+  static const String APP_NAME = 'APP Names Here';
+  static const double APP_VERSION = 1.0;
 
 
 
