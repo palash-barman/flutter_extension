@@ -66,12 +66,15 @@ CustomButton(
   onTap: () {},
   text: "Click Me",
   loading : true or false
-),```
+),
+
+```
 
 
 ## Example API Integration Usage
 
 This section shows how to use **Api Integration** in your Flutter project.
+
 ```dart
 class HomeController extends GetxController {
   var isLoading = false.obs;
