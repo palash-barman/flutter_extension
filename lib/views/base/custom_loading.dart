@@ -13,7 +13,7 @@ class CustomLoading extends StatelessWidget {
     return   Center(
         child: SpinKitCircle(
         color:color??AppColors.primaryColor,
-        size: size??20.0,
+        size: size??20.0,  
     ),);
   }
 }

@@ -17,6 +17,8 @@ dependencies:
   flutter_svg:
   flutter_spinkit:
   cached_network_image:
+  shimmer: 
+
 
 
 

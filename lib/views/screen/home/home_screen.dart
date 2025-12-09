@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_extension/controller/home_controller.dart';
 import 'package:flutter_extension/controller/localization_controller.dart';
 import 'package:flutter_extension/controller/theme_controller.dart';
 import 'package:flutter_extension/util/app_constants.dart';
@@ -15,9 +16,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final HomeController homeController = Get.put(HomeController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Home Screen')),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,10 +80,23 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(width: 20),
             // Example of CustomImage usage
-            const CustomImage(image: "slslsls", height: 100, width: 200),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: const CustomImage(
+                image: "slslsls",
+                height: 100,
+                width: 200,
+              ),
+            ),
             const SizedBox(height: 20),
             // Example of CustomButton usage
-            CustomButton(onTap: () {}, text: "Click Me",),
+           
+               CustomButton(
+                onTap: () {
+                },
+                text: "Click Me",
+              ),
+            
           ],
         ),
       ),

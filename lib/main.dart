@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 
+
 import 'controller/localization_controller.dart';
 import 'controller/theme_controller.dart';
 import 'helper/get_di.dart' as di;
@@ -30,19 +31,21 @@ class MyApp extends StatelessWidget {
             minTextAdapt: true,
             splitScreenMode: true,
             builder: (_ , child) {
-            return GetMaterialApp(
-              title: AppConstants.APP_NAME,
-              debugShowCheckedModeBanner: false,
-              navigatorKey: Get.key,
-              theme: themeController.darkTheme ?  dark() : light(),
-              defaultTransition: Transition.topLevel,
-              locale: localizeController.locale,
-              translations: Messages(languages: languages),
-              fallbackLocale: Locale(AppConstants.languages[0].languageCode, AppConstants.languages[0].countryCode),
-              transitionDuration: const Duration(milliseconds: 500),
-              getPages: AppRoutes.page,
-              initialRoute: AppRoutes.splashScreen,
-            );
+            return 
+               GetMaterialApp(
+                title: AppConstants.APP_NAME,
+                debugShowCheckedModeBanner: false,
+                navigatorKey: Get.key,
+                theme: themeController.darkTheme ?  dark() : light(),
+                defaultTransition: Transition.topLevel,
+                locale: localizeController.locale,
+                translations: Messages(languages: languages),
+                fallbackLocale: Locale(AppConstants.languages[0].languageCode, AppConstants.languages[0].countryCode),
+                transitionDuration: const Duration(milliseconds: 500),
+                getPages: AppRoutes.page,
+                initialRoute: AppRoutes.splashScreen,
+              );
+            
           }
         );
       }

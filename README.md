@@ -46,7 +46,7 @@ GetBuilder<LocalizationController>(builder: (localizationController) {
     },
   );
 }),
-dart```
+```
 
 ## Example Custom Widgets Usage
 
@@ -65,7 +65,35 @@ const SizedBox(height: 20),
 CustomButton(
   onTap: () {},
   text: "Click Me",
+  loading : true or false
 ),
+
+
+## Example API Integration Usage
+
+This section shows how to use **Api Integration** in your Flutter project.
+```dart
+class HomeController extends GetxController {
+  var isLoading = false.obs;
+  create() async {
+    isLoading.value = true;
+    var body={"key": "value"};
+
+    var response = await ApiClient.postData(
+      "API End Point",
+      body,
+    );
+
+    if (response.statusCode == 201) {
+      debugPrint("success");
+    } else {
+      ApiChecker.checkApi(response);
+      debugPrint("failed");
+    }
+    isLoading.value = false;
+  }
+}
+```
 
 
 

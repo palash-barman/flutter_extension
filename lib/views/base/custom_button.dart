@@ -7,14 +7,15 @@ import '../../util/style.dart';
 
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key,this.color,this.textStyle, this.padding =EdgeInsets.zero, required this.onTap,required this.text ,this.loading=false,this.width,this.height});
+  const CustomButton({super.key,this.color,this.textStyle, this.radius, this.margin =EdgeInsets.zero, required this.onTap,required this.text ,this.loading=false,this.width,this.height});
  final Function() onTap;
   final String text;
   final bool loading;
   final double? height;
   final double? width;
   final Color? color;
-  final EdgeInsetsGeometry padding;
+  final double? radius;
+  final EdgeInsetsGeometry margin;
   final  TextStyle? textStyle;
 
 
@@ -22,11 +23,11 @@ class CustomButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return  Padding(
-      padding: padding,
+      padding: margin,
       child: ElevatedButton(onPressed:loading? (){}:onTap,
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24.r)
+                borderRadius: BorderRadius.circular(radius??24.r)
             ),
             backgroundColor: color??AppColors.primaryColor,
             minimumSize:Size(width??Get.width, height??53.h),
