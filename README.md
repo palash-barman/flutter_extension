@@ -66,7 +66,7 @@ CustomButton(
   onTap: () {},
   text: "Click Me",
   loading : true or false
-),
+),```
 
 
 ## Example API Integration Usage
